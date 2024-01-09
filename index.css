@@ -1,0 +1,259 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  a {
+    text-decoration: none;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+}
+
+#ncc {
+    overflow: auto;
+}
+
+#ncc .page {
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.mobile-menu {
+    display: none;
+}
+.sidebar {
+    background-color: #191718;
+    width: 150px;
+    height: 935px;
+    flex-shrink: 0;
+}
+.nav-item {
+    border-bottom: 1px solid #5C5C5C;
+    cursor: pointer;
+}
+.nav-item a {
+    display: block;
+    padding: 14px 16px;
+    color: #AAAAAA;
+    font-weight: 700;
+    text-transform: capitalize;
+
+}
+
+.nav-item.nav-item-active a{
+    color: #ffffff;
+}
+
+.nav-item:hover {
+    background-color: #5C5C5C;
+}
+.nav-item:hover > a {
+    color: #ffffff;
+}
+
+
+.main {
+    width: 1768px;
+    height: 935px;
+    background-color: #ffffff;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 18px 0;
+}
+.logo > img {
+    width: 310px;
+    height: 122px;
+}
+
+.container {
+    width: 1510px;
+    margin: 0 auto;
+}
+
+.group1 {
+    background-color: #EFEFEF;
+    padding: 44px 0;
+
+}
+
+.group1-title {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.group1-desc {
+    width: 972px;
+    display: flex;
+    margin: 0 auto;
+}
+.group1-desc > p{
+    font-weight: 400;
+    text-align: center;
+}
+
+.group2 {
+    margin-top: 40px;
+}
+
+.group2-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+}
+.group2-item-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.group2-item-content {
+    position: relative;
+}
+
+.group2-item-content > img {
+    width: 128px;
+    height: 128px;
+    float: left;
+    margin-right: 15px;
+}
+
+.group2-item-content > p {
+    font-weight: 400;
+}
+
+
+.footer {
+    border-top: 1px solid #DEDEDE;
+    height: 79px;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer-text {
+    color: #3E3E3E;
+    font-weight: 400;
+}
+
+/* tablet */
+@media only screen and (max-width: 1024px) {
+    .main {
+        margin-top: 40px;
+        width: 100%;
+        height: 100%;
+        padding: 0 20px;
+        flex-shrink: unset;
+    }
+    .container {
+        width: 100%;
+    }
+    .group1 {
+        padding: 44px 10px;
+    }
+    .group1-desc{
+        width: 100%;
+    }
+    .group2-list {
+        /* display: grid; */
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px;
+    }
+    .sidebar {
+        height: auto;
+    }
+    .footer {
+        position: unset;
+    }
+}
+
+/* mobile */
+
+@media only screen and (max-width: 740px) {
+    .footer {
+        position: unset;
+    }
+    .sidebar {
+        display: none;
+        position: fixed;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: 1;
+    }
+    .nav-item.nav-item-active a{
+        color: #000000;
+    }
+    .mobile-menu {
+        display: block; 
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 2;
+        background-color: #ffffff;
+    }
+    .main {
+        margin-top: 40px;
+        width: 100%;
+        padding: 0 20px;
+    }
+    .container {
+        width: 100%;
+    }
+    .group1 {
+        padding: 44px 10px;
+    }
+    .group1-desc{
+        width: 100%;
+    }
+    .group2-list {
+        /* display: grid; */
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 30px;
+    }
+    
+   
+
+}
+/* pc màn thường */
+@media only screen and (min-width: 1200px) {
+    .main {
+        flex-shrink: unset;
+    }
+    .container {
+        width: 1050px;
+    }
+}
+
+
+
